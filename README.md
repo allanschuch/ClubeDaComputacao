@@ -1,1 +1,1 @@
-Projeto final da disciplina Programação Orientada a Obejtos do curso de Ciência da Computação
+Projeto final da disciplina Programação Orientada a Objetos do curso de Ciência da Computação

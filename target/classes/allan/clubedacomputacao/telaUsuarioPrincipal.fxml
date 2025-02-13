@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="allan.clubedacomputacao.TelaUsuarioPrincipalController">
+   <children>
+      <TitledPane animated="false" prefHeight="374.0" prefWidth="896.0" text="Busca">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="-1.0" prefHeight="322.0" prefWidth="928.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="896.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="87.0" prefWidth="86.0">
+                                 <children>
+                                    <Label text="Buscar por" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="87.0" prefWidth="53.0">
+                                 <children>
+                                    <Label prefHeight="21.0" prefWidth="36.0" text="Nome:" />
+                                    <HBox prefHeight="18.0" prefWidth="63.0" />
+                                    <Label prefHeight="6.0" prefWidth="50.0" text="Interesse:" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="309.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="309.0">
+                                       <children>
+                                          <VBox prefHeight="43.0" prefWidth="13.0" />
+                                          <TextField fx:id="textFiedBuscaNome" prefHeight="26.0" prefWidth="190.0" />
+                                          <VBox prefHeight="43.0" prefWidth="42.0" />
+                                          <Button mnemonicParsing="false" onAction="#buscarPorNome" text="Buscar" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="0.0" prefWidth="310.0" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="270.0">
+                                       <children>
+                                          <VBox prefHeight="43.0" prefWidth="13.0" />
+                                          <ChoiceBox fx:id="choiceBoxBuscaInteresse" prefHeight="26.0" prefWidth="190.0" />
+                                          <VBox prefHeight="36.0" prefWidth="42.0" />
+                                          <Button mnemonicParsing="false" onAction="#buscaPorInteresse" text="Buscar" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="86.0" prefWidth="271.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="86.0" prefWidth="271.0">
+                                       <children>
+                                          <ImageView fx:id="imageViewUsuarioLogado" fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" />
+                                          <VBox alignment="CENTER" prefHeight="86.0" prefWidth="174.0">
+                                             <children>
+                                                <Label text="Bem vindo(a)," />
+                                                <HBox prefHeight="9.0" prefWidth="100.0" />
+                                                <Label fx:id="labelUsuarioLogado" alignment="CENTER" prefHeight="18.0" prefWidth="184.0">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children></VBox>
+                              <VBox alignment="CENTER" prefHeight="86.0" prefWidth="87.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#logout" text="Logout" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="896.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="208.0" prefWidth="896.0">
+                           <children>
+                              <VBox prefHeight="236.0" prefWidth="442.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="38.0" prefWidth="386.0">
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="119.0" text="Usuarios Encontrados" />
+                                          <VBox prefHeight="25.0" prefWidth="101.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="196.0" prefWidth="450.0">
+                                       <children>
+                                          <ListView fx:id="listViewUsuariosBusca" prefHeight="196.0" prefWidth="353.0" />
+                                          <VBox alignment="CENTER" prefHeight="215.0" prefWidth="94.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#visualizarInfos" text="Visualizar" />
+                                                <HBox prefHeight="14.0" prefWidth="92.0" />
+                                                <Button mnemonicParsing="false" onAction="#seguirUsuario" prefHeight="26.0" prefWidth="68.0" text="Seguir" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="236.0" prefWidth="34.0" />
+                              <VBox alignment="BOTTOM_LEFT" prefHeight="207.0" prefWidth="453.0">
+                                 <children>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="130.0" prefWidth="402.0">
+                                       <children>
+                                          <ImageView fx:id="imageViewBuscaAvatar" fitHeight="127.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" />
+                                          <VBox prefHeight="110.0" prefWidth="26.0" />
+                                          <VBox prefHeight="130.0" prefWidth="308.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="260.0">
+                                                   <children>
+                                                      <Label fx:id="labelBuscaNome" prefHeight="18.0" prefWidth="278.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="260.0">
+                                                   <children>
+                                                      <Label fx:id="labelBuscaCidade" prefHeight="18.0" prefWidth="147.0" />
+                                                      <Label fx:id="labelBuscaNascimento" prefHeight="18.0" prefWidth="148.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="260.0">
+                                                   <children>
+                                                      <Label fx:id="labelBuscaSexo" prefHeight="18.0" prefWidth="153.0" />
+                                                      <Label fx:id="labelBuscaFone" prefHeight="18.0" prefWidth="142.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="260.0">
+                                                   <children>
+                                                      <Label fx:id="labelBuscaEmail" prefHeight="18.0" prefWidth="303.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="260.0">
+                                                   <children>
+                                                      <Label fx:id="labelBuscaInteresses" prefHeight="36.0" prefWidth="304.0" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="21.0" prefWidth="402.0" />
+                                    <HBox alignment="CENTER" prefHeight="26.0" prefWidth="402.0">
+                                       <children>
+                                          <Label fx:id="labelPromptBusca" alignment="BOTTOM_CENTER" prefHeight="18.0" prefWidth="394.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <HBox prefHeight="332.0" prefWidth="936.0">
+         <children>
+            <TitledPane animated="false" prefHeight="325.0" prefWidth="355.0" text="Perfis que eu sigo">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="486.0">
+                     <children>
+                        <VBox layoutX="-1.0" prefHeight="298.0" prefWidth="355.0">
+                           <children>
+                              <HBox prefHeight="193.0" prefWidth="355.0">
+                                 <children>
+                                    <VBox prefHeight="194.0" prefWidth="29.0" />
+                                    <ListView fx:id="listViewUsuariosSeguidos" prefHeight="194.0" prefWidth="298.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="72.0" prefWidth="355.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#pararDeSeguir" text="Parar de Seguir" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="355.0">
+                                 <children>
+                                    <Label fx:id="labelPromptPerfisQueEuSigo" alignment="CENTER" prefHeight="18.0" prefWidth="338.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="325.0" prefWidth="482.0" text="Meus Dados">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="486.0">
+                     <children>
+                        <VBox layoutX="-3.0" layoutY="2.0" prefHeight="298.0" prefWidth="482.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="466.0">
+                                 <children>
+                                    <VBox prefHeight="44.0" prefWidth="17.0" />
+                                    <Label prefHeight="18.0" prefWidth="46.0" text="Nome:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldDadosNome" prefHeight="26.0" prefWidth="130.0" />
+                                    <VBox prefHeight="44.0" prefWidth="17.0" />
+                                    <Label prefHeight="18.0" prefWidth="81.0" text="Sobrenome:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldDadosSobrenome" prefHeight="26.0" prefWidth="158.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="466.0">
+                                 <children>
+                                    <VBox prefHeight="44.0" prefWidth="17.0" />
+                                    <Label prefHeight="18.0" prefWidth="46.0" text="Email:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldDadosEmail" prefHeight="26.0" prefWidth="212.0" />
+                                    <VBox prefHeight="44.0" prefWidth="17.0" />
+                                    <Label prefHeight="18.0" prefWidth="42.0" text="Fone:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldDadosFone" prefHeight="26.0" prefWidth="116.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="466.0">
+                                 <children>
+                                    <VBox prefHeight="44.0" prefWidth="17.0" />
+                                    <Label prefHeight="18.0" prefWidth="52.0" text="Cidade:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldDadosCidade" prefHeight="26.0" prefWidth="140.0" />
+                                    <VBox prefHeight="44.0" prefWidth="17.0" />
+                                    <Label prefHeight="18.0" prefWidth="126.0" text="Data de Nascimento: ">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldDadosNascimento" prefHeight="26.0" prefWidth="98.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="466.0">
+                                 <children>
+                                    <VBox prefHeight="44.0" prefWidth="17.0" />
+                                    <Label prefHeight="18.0" prefWidth="46.0" text="Login:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldDadosLogin" prefHeight="26.0" prefWidth="149.0" />
+                                    <VBox prefHeight="44.0" prefWidth="17.0" />
+                                    <Label prefHeight="18.0" prefWidth="48.0" text="Senha: ">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textFieldDadosSenha" prefHeight="26.0" prefWidth="154.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="482.0">
+                                 <children>
+                                    <VBox prefHeight="38.0" prefWidth="25.0" />
+                                    <Label prefHeight="18.0" prefWidth="72.0" text="Interesses:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox prefHeight="38.0" prefWidth="17.0" />
+                                    <CheckBox fx:id="checkBoxInteressePython" mnemonicParsing="false" prefHeight="18.0" prefWidth="72.0" text="Python" />
+                                    <CheckBox fx:id="checkBoxInteresseRuby" mnemonicParsing="false" prefHeight="18.0" prefWidth="62.0" text="Ruby" />
+                                    <CheckBox fx:id="checkBoxInteresseC" mnemonicParsing="false" prefHeight="18.0" prefWidth="62.0" text="C++" />
+                                    <CheckBox fx:id="checkBoxInteresseJava" mnemonicParsing="false" prefHeight="18.0" prefWidth="58.0" text="Java" />
+                                    <CheckBox fx:id="checkBoxInteresseSQL" mnemonicParsing="false" prefHeight="18.0" prefWidth="55.0" text="SQL" />
+                                    <CheckBox fx:id="checkBoxInteresseHTML" mnemonicParsing="false" prefHeight="18.0" prefWidth="70.0" text="HTML" />
+                                    <CheckBox fx:id="checkBoxInteressePHP" mnemonicParsing="false" prefHeight="18.0" prefWidth="70.0" text="PHP" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="482.0">
+                                 <children>
+                                    <VBox prefHeight="44.0" prefWidth="17.0" />
+                                    <Label prefHeight="18.0" prefWidth="45.0" text="Sexo:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <RadioButton fx:id="radioButtonSexoMasculino" mnemonicParsing="false" prefHeight="18.0" prefWidth="90.0" text="Masculino">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="radioButtonGroupSexo" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="radioButtonSexoFeminino" mnemonicParsing="false" prefHeight="18.0" prefWidth="79.0" text="Feminino" toggleGroup="$radioButtonGroupSexo" />
+                                    <VBox prefHeight="42.0" prefWidth="29.0" />
+                                    <Button mnemonicParsing="false" onAction="#salvarAlterações" text="Salvar Alterações" />
+                                    <VBox prefHeight="42.0" prefWidth="17.0" />
+                                    <Button mnemonicParsing="false" onAction="#restaurar" text="Restaurar" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="43.0" prefWidth="482.0">
+                                 <children>
+                                    <Label fx:id="labelPromptDados" alignment="CENTER" prefHeight="18.0" prefWidth="448.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Criar post e" />
+                  <Label text="acessar Feed:" />
+                  <HBox prefHeight="21.0" prefWidth="100.0" />
+                  <Button mnemonicParsing="false" onAction="#acessarTelaPostTimeline" prefHeight="26.0" prefWidth="46.0" text="Ir" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

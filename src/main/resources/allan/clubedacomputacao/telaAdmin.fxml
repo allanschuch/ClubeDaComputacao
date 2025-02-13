@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="allan.clubedacomputacao.TelaAdminController">
+   <children>
+      <TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="666.0" text="Criação de Usuário">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="668.0">
+               <children>
+                  <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="6.0" text="Bem vindo(a), admin" />
+                  <Label fx:id="labelAdminLogado" layoutX="129.0" layoutY="6.0" prefHeight="18.0" prefWidth="225.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="TOP_CENTER" layoutX="12.0" layoutY="24.0" prefHeight="494.0" prefWidth="628.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="196.0" text="FORMULÁRIO CRIAÇÃO USUÁRIO">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="628.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="62.0" prefWidth="58.0" text="Nome:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldNome" prefHeight="26.0" prefWidth="125.0" />
+                              <Label alignment="CENTER" prefHeight="62.0" prefWidth="84.0" text="Sobrenome:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldSobrenome" prefHeight="26.0" prefWidth="125.0" />
+                              <Label alignment="CENTER" prefHeight="62.0" prefWidth="58.0" text="Cidade:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldCidade" prefHeight="26.0" prefWidth="146.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="628.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="62.0" prefWidth="58.0" text="Email:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldEmail" prefHeight="26.0" prefWidth="222.0" />
+                              <Label alignment="CENTER" prefHeight="62.0" prefWidth="50.0" text="Fone:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldFone" prefHeight="26.0" prefWidth="146.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="628.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="136.0" text="Data de Nascimento:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="datePickerNascimento" />
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="61.0" text="Sexo:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <RadioButton fx:id="radioButtonMasculino" mnemonicParsing="false" prefHeight="18.0" prefWidth="90.0" selected="true" text="Masculino">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="radioButtonGroupSexo" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="radioButtonFeminino" mnemonicParsing="false" text="Feminino" toggleGroup="$radioButtonGroupSexo" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="628.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="49.0" text="Login:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldLogin" prefHeight="26.0" prefWidth="154.0" />
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="54.0" text="Senha:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldSenha" prefHeight="26.0" prefWidth="154.0" />
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="84.0" text="Privilégio:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <RadioButton fx:id="radioButtonAdmin" mnemonicParsing="false" prefHeight="18.0" prefWidth="69.0" text="Admin">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="radioButtonGroupPrivilegio" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="radioButtonComum" mnemonicParsing="false" selected="true" text="Comum" toggleGroup="$radioButtonGroupPrivilegio" />
+                           </children>
+                        </HBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="178.0" prefWidth="628.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="202.0" text="Escolha o avatar:">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="141.0" prefWidth="628.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fx:id="imageViewAvatar1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/avatares/users-1.png" />
+                                             </image>
+                                          </ImageView>
+                                          <RadioButton fx:id="radioButtonAvatar1" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="88.0" selected="true" text="Avatar 1">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="radioButtonGroupAvatar" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fx:id="imageViewAvatar2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/avatares/users-2.png" />
+                                             </image>
+                                          </ImageView>
+                                          <RadioButton fx:id="radioButtonAvatar2" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="88.0" text="Avatar 2" toggleGroup="$radioButtonGroupAvatar" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fx:id="imageViewAvatar3" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/avatares/users-3.png" />
+                                             </image>
+                                          </ImageView>
+                                          <RadioButton fx:id="radioButtonAvatar3" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="88.0" text="Avatar 3" toggleGroup="$radioButtonGroupAvatar" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fx:id="imageViewAvatar4" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/avatares/users-4.png" />
+                                             </image>
+                                          </ImageView>
+                                          <RadioButton fx:id="radioButtonAvatar4" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="88.0" text="Avatar 4" toggleGroup="$radioButtonGroupAvatar" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fx:id="imageViewAvatar5" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/avatares/users-5.png" />
+                                             </image>
+                                          </ImageView>
+                                          <RadioButton fx:id="radioButtonAvatar5" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="88.0" text="Avatar 5" toggleGroup="$radioButtonGroupAvatar" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fx:id="imageViewAvatar6" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/avatares/users-6.png" />
+                                             </image>
+                                          </ImageView>
+                                          <RadioButton fx:id="radioButtonAvatar6" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="88.0" text="Avatar 6" toggleGroup="$radioButtonGroupAvatar" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="46.0" prefWidth="628.0">
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="148.0" text="Selecione os interesses:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <CheckBox fx:id="checkBoxInteressePython" mnemonicParsing="false" prefHeight="18.0" prefWidth="72.0" text="Python" />
+                              <CheckBox fx:id="checkBoxInteresseRuby" mnemonicParsing="false" prefHeight="18.0" prefWidth="62.0" text="Ruby" />
+                              <CheckBox fx:id="checkBoxInteresseC" mnemonicParsing="false" prefHeight="18.0" prefWidth="62.0" text="C++" />
+                              <CheckBox fx:id="checkBoxInteresseJava" mnemonicParsing="false" prefHeight="18.0" prefWidth="58.0" text="Java" />
+                              <CheckBox fx:id="checkBoxInteresseSQL" mnemonicParsing="false" prefHeight="18.0" prefWidth="55.0" text="SQL" />
+                              <CheckBox fx:id="checkBoxInteresseHTML" mnemonicParsing="false" prefHeight="18.0" prefWidth="70.0" text="HTML" />
+                              <CheckBox fx:id="checkBoxInteressePHP" mnemonicParsing="false" prefHeight="18.0" prefWidth="70.0" text="PHP" />
+                           </children></HBox>
+                        <HBox alignment="CENTER" prefHeight="12.0" prefWidth="628.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#criarUsuario" prefWidth="85.0" text="Criar Usuário" />
+                              <VBox prefHeight="26.0" prefWidth="45.0" />
+                              <Button mnemonicParsing="false" onAction="#limparCampos" text="Limpar Campos" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="12.0" prefWidth="628.0" />
+                        <Label fx:id="labelPromptCriacaoUsuario" alignment="CENTER" prefHeight="30.0" prefWidth="465.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button layoutX="585.0" layoutY="11.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" prefHeight="209.0" prefWidth="580.0" text="Excluir Usuários">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="237.0" prefWidth="666.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="15.0" prefHeight="178.0" prefWidth="633.0">
+                     <children>
+                        <ListView fx:id="listViewUsuarios" prefHeight="178.0" prefWidth="254.0" />
+                        <VBox prefHeight="178.0" prefWidth="383.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="114.0" prefWidth="382.0">
+                                 <children>
+                                    <ImageView fx:id="imageViewExclusaoAvatar" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                                    <VBox prefHeight="100.0" prefWidth="39.0" />
+                                    <VBox alignment="TOP_CENTER" prefHeight="119.0" prefWidth="246.0">
+                                       <children>
+                                          <Label fx:id="labelExclusaoId" prefHeight="21.0" prefWidth="222.0">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelExclusaoNome" prefHeight="26.0" prefWidth="245.0" />
+                                          <Label fx:id="labelExclusaoPrivilegio" prefHeight="23.0" prefWidth="246.0" />
+                                          <Label fx:id="labelExclusaoLogin" prefHeight="23.0" prefWidth="246.0" />
+                                          <Label fx:id="labelExclusaoSenha" prefHeight="23.0" prefWidth="246.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="77.0" prefWidth="382.0">
+                                 <children>
+                                    <VBox prefHeight="78.0" prefWidth="29.0" />
+                                    <VBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="99.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#exibirInfos" prefHeight="26.0" prefWidth="93.0" text="Exibir Infos" />
+                                          <HBox prefHeight="7.0" prefWidth="99.0" />
+                                          <Button fx:id="buttonExcluirUsuario" mnemonicParsing="false" onAction="#excluirUsuario" text="Excluir Usuario" />
+                                       </children>
+                                    </VBox>
+                                    <Label fx:id="labelPromptExclusao" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="246.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</VBox>

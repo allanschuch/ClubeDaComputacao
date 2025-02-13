@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="1109.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="allan.clubedacomputacao.TelaUsuarioPostTimelineController">
+   <children>
+      <HBox prefHeight="317.0" prefWidth="747.0">
+         <children>
+            <VBox prefHeight="302.0" prefWidth="397.0">
+               <children>
+                  <TitledPane animated="false" prefHeight="323.0" prefWidth="226.0" text="Meus Posts">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutY="-1.0" prefHeight="278.0" prefWidth="398.0">
+                                 <children>
+                                    <HBox prefHeight="197.0" prefWidth="374.0">
+                                       <children>
+                                          <ListView fx:id="listViewMeusPosts" prefHeight="197.0" prefWidth="403.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="226.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#visualizarMeuPost" text="Visualizar" />
+                                          <VBox prefHeight="47.0" prefWidth="18.0" />
+                                          <Button mnemonicParsing="false" onAction="#excluirPost" text="Excluir" />
+                                       </children>
+                                    </HBox>
+                                    <Label fx:id="labelPromptMeusPosts" alignment="CENTER" prefHeight="30.0" prefWidth="226.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="351.0" prefWidth="302.0">
+               <children>
+                  <TitledPane animated="false" text="Criar Post (max 280 caracteres)">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="295.0">
+                           <children>
+                              <HBox layoutY="-3.0" prefHeight="278.0" prefWidth="298.0">
+                                 <children>
+                                    <VBox prefHeight="278.0" prefWidth="21.0" />
+                                    <VBox alignment="CENTER" prefHeight="278.0" prefWidth="258.0">
+                                       <children>
+                                          <HBox prefHeight="28.0" prefWidth="258.0" />
+                                          <HBox prefHeight="170.0" prefWidth="258.0">
+                                             <children>
+                                                <TextArea fx:id="textAreaCriarPost" prefHeight="170.0" prefWidth="274.0" wrapText="true" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="58.0" prefWidth="258.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#criarPost" text="Criar Post" />
+                                                <VBox prefHeight="64.0" prefWidth="19.0" />
+                                                <Button mnemonicParsing="false" onAction="#limparTextAreaCriarPost" text="Limpar" />
+                                             </children>
+                                          </HBox>
+                                          <Label fx:id="labelPromptCriarPost" alignment="CENTER" prefHeight="18.0" prefWidth="270.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="278.0" prefWidth="21.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="302.0" prefWidth="407.0">
+               <children>
+                  <TitledPane animated="false" prefHeight="329.0" prefWidth="226.0" text="Meu Feed">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutY="-1.0" prefHeight="276.0" prefWidth="407.0">
+                                 <children>
+                                    <HBox prefHeight="200.0" prefWidth="226.0">
+                                       <children>
+                                          <ListView fx:id="listViewFeed" prefHeight="198.0" prefWidth="419.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="55.0" prefWidth="226.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#visualizarPostFeed" text="Visualizar" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TitledPane animated="false" text="Exibição">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox layoutX="-3.0" layoutY="-2.0" prefHeight="166.0" prefWidth="1110.0">
+                     <children>
+                        <VBox prefHeight="166.0" prefWidth="28.0" />
+                        <VBox alignment="TOP_CENTER" prefHeight="166.0" prefWidth="206.0">
+                           <children>
+                              <Label fx:id="labelExibicaoTituloAutor" alignment="CENTER" prefHeight="31.0" prefWidth="95.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imageViewExibicaoAvatar" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="labelExibicaoNome" alignment="CENTER" prefHeight="19.0" prefWidth="205.0" />
+                              <Label fx:id="labelExibicaoData" alignment="CENTER" prefHeight="19.0" prefWidth="205.0" />
+                              <Label fx:id="labelExibicaoHora" alignment="CENTER" prefHeight="19.0" prefWidth="205.0" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="166.0" prefWidth="23.0" />
+                        <VBox alignment="CENTER" prefHeight="166.0" prefWidth="282.0">
+                           <children>
+                              <VBox prefHeight="166.0" prefWidth="15.0">
+                                 <children>
+                                    <Label fx:id="labelExibicaoTituloPost" alignment="CENTER" prefHeight="36.0" prefWidth="282.0" text="Conteudo Post" visible="false">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="textAreaExibicaoPost" editable="false" prefHeight="138.0" prefWidth="282.0" visible="false" wrapText="true" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="166.0" prefWidth="25.0" />
+                        <VBox alignment="CENTER" prefHeight="166.0" prefWidth="79.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#limparExibicaoPost" text="Limpar" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="166.0" prefWidth="456.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="0.0" prefWidth="66.0" text="Retornar " />
+                              <Label alignment="CENTER" prefHeight="0.0" prefWidth="66.0" text="ao perfil:" />
+                              <HBox prefHeight="12.0" prefWidth="99.0" />
+                              <Button mnemonicParsing="false" onAction="#voltarTelaPerfil" text="Voltar" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </children>
+</VBox>
